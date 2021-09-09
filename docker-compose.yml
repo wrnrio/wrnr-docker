@@ -1,0 +1,37 @@
+version: '3'
+  
+services:
+  reverseproxy:
+    container_name: reverseproxy
+    image: 774964239202.dkr.ecr.us-east-1.amazonaws.com/wrnr-nginx:v2
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+
+  wrnr:
+    container_name: wrnr
+    depends_on:
+      - nats
+    image: 774964239202.dkr.ecr.us-east-1.amazonaws.com/wrnr-wrnr:v8
+    # needs an IAM user with AmazonS3FullAccess permission
+    environment:
+      - aws_access_key_id=<aws_access_key_id_with_AmazonS3FullAccess>
+      - aws_secret_access_key=<aws_secret_access_key_with_AmazonS3FullAccess>
+     #- LOG_LEVEL=debug
+      - WRNR_STORAGE_ROOT=/opt/wrnr/data
+    # expose:
+    #   - 8161
+    volumes:
+      - /space/wrnr:/opt/wrnr/data
+    restart: always
+
+  nats:
+    container_name: nats
+    image: 774964239202.dkr.ecr.us-east-1.amazonaws.com/wrnr-nats:v3
+    # expose:
+    #   - 4222
+    #   - 8222
+    restart: always
+    volumes:
+      - /space/wrnr:/opt/wrnr
