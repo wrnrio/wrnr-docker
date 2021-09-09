@@ -12,5 +12,8 @@ To create a docker environment with `docker-compose`
 5. Add the user to group created above 
 6. Get the ACCESS_KEY_ID and SECRET_ACCESS_KEY 
 
+### Give it storage access on host ###
+- Create a folder for storing WRNR.io data (eg used here: /space)
+
 ### Run in docker ###
 - Run `docker-compose up` or `docker-compose start`
