@@ -23,7 +23,7 @@ services:
     # expose:
     #   - 8161
     volumes:
-      - /space/wrnr:/opt/wrnr/data
+      - <storage_space_created_on_host>:/opt/wrnr/data
     restart: always
 
   nats:
@@ -34,4 +34,4 @@ services:
     #   - 8222
     restart: always
     volumes:
-      - /space/wrnr:/opt/wrnr
+      - <storage_space_created_on_host>:/opt/wrnr
