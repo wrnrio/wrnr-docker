@@ -27,7 +27,7 @@ All data should be stored locally and on SSD with atleast a `gp3` storage type.<
 - Clone this repo
 - Run `docker-compose up` or `docker-compose start`
 
-## Using WRNR.io **
+## Using WRNR.io ##
 - Login to the UI by selecting the IP address of the EC2 instance
 - The product comes with a self-signed certificate that can be accepted by _Firefox_ or with _Chrome_ download the certificate and import to keychain (for mac only)
 - Signup and confirm code and you're all set to use WRNR.io
