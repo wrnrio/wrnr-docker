@@ -5,7 +5,7 @@ In this model WRNR.io runs on the users VPC and uses an object storage model whe
 No data ever leaves your VPC.
 
 ### AWS instance suggested
-WRNR.io is an IO heavy solution storing ingest data and processed data and retrieving it to answer queries.<br>
+WRNR.io is an I/O heavy solution storing ingest data and processed data and retrieving it to answer queries.<br>
 All data should be stored locally and on SSD with atleast a `gp3` storage type.<br>
 **It is suggested to create a storage volume of size depending on your daily ingest and it mounted to the EC2 instance.**<br>
 **The recommended EC2 instance types are m5dn.large and above.**  
