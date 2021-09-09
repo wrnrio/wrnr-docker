@@ -7,7 +7,7 @@ No data ever leaves your VPC.
 ### AWS instance suggested
 WRNR.io is an I/O heavy solution storing ingest data and processed data and retrieving it to answer queries.<br>
 All data should be stored locally and on SSD with atleast a `gp3` storage type.<br>
-**It is suggested to create a storage volume of size depending on your daily ingest and it mounted to the EC2 instance.**<br>
+**It is suggested to create a storage volume of size depending on your daily ingest and it be mounted to the EC2 instance.**<br>
 **The recommended EC2 instance types are m5dn.large and above.**  
 
 ### Create IAM User with S3 Access ###
