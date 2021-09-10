@@ -26,6 +26,7 @@ _The recommended EC2 instance types are m5dn.large and above._
 ### Run in docker ###
 - Create an EC2 instance (preferably m5dn.large or bigger)
 - Clone this repo
+- Install docker and docker-compose
 - Run `docker-compose up` or `docker-compose start`
 
 ## Using WRNR.io ##
