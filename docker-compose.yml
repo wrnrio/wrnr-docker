@@ -16,10 +16,12 @@ services:
     image: 774964239202.dkr.ecr.us-east-1.amazonaws.com/wrnr-wrnr:v10
     # needs an IAM user with AmazonS3FullAccess permission
     environment:
-      - aws_access_key_id=<aws_access_key_id_with_AmazonS3FullAccess>
-      - aws_secret_access_key=<aws_secret_access_key_with_AmazonS3FullAccess>
-     #- LOG_LEVEL=debug
-      - WRNR_STORAGE_ROOT=/opt/wrnr/data
+      - aws_access_key_id=<access_key_with_S3Admin_permission>
+      - aws_secret_access_key=<secret_for_key_with_S3Admin_permission>
+      # if not provided it will get region of docker container and create a root
+      # bucket wrnr-io-<region>
+      # - WRNR_S3_REGION=
+      # - WRNR_S3_ROOT_BUCKET=
     # expose:
     #   - 8161
     volumes:
