@@ -18,6 +18,8 @@ services:
     environment:
       - aws_access_key_id=<access_key_with_S3Admin_permission>
       - aws_secret_access_key=<secret_for_key_with_S3Admin_permission>
+      # - LOG_LEVEL=debug
+      - WRNR_STORAGE_ROOT=/opt/wrnr/data      
       # if not provided it will get region of docker container and create a root
       # bucket wrnr-io-<region>
       # - WRNR_S3_REGION=
