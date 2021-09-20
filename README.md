@@ -3,6 +3,7 @@
 *General instructions for installing WRNR.io on docker and in AWS OwnVPC mode.*<br>
 In this model WRNR.io runs on the users VPC and uses an object storage model where all your data is stored and retrieved from your own S3 partition.
 No data ever leaves your VPC.
+Read updates [here](https://github.com/wrnrio/wrnr-docker-ownvpc/edit/main/updates.md).
 
 ### AWS instance suggested
 WRNR.io is an I/O heavy solution storing ingest data and processed data _temporarily_ and retrieving it to answer queries.<br>
