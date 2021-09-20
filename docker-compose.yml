@@ -13,7 +13,7 @@ services:
     container_name: wrnr
     depends_on:
       - nats
-    image: 774964239202.dkr.ecr.us-east-1.amazonaws.com/wrnr-wrnr:v10
+    image: 774964239202.dkr.ecr.us-east-1.amazonaws.com/wrnr-wrnr:v13
     # needs an IAM user with AmazonS3FullAccess permission
     environment:
       - aws_access_key_id=<access_key_with_S3Admin_permission>
